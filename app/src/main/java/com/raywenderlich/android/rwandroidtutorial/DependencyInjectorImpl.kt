@@ -1,6 +1,6 @@
 package com.raywenderlich.android.rwandroidtutorial
 
-class DependencyInjectorImp: DependencyInjector {
+class DependencyInjectorImpl: DependencyInjector {
     override fun weatherRepository() : WeatherRepository {
         return WeatherRepositoryImpl()
     }

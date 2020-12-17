@@ -25,4 +25,18 @@ class MainPresenter(view: MainContract.View,dependencyInjector: DependencyInject
         return WeatherState.SUN
     }
 
+
+    override fun onDestroy(){
+        this.view = null
+    }
+
+    override fun onViewCreated(){
+        loadWeather()
+    }
+
+    override fun onLoadWeatherTapped(){
+        loadWeather()
+    }
+
+
 }
