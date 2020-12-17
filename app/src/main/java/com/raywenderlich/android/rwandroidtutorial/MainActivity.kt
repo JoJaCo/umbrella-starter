@@ -63,17 +63,8 @@ class MainActivity : AppCompatActivity() {
     }
   }
 
-  private fun loadWeather() {
-    val weather = weatherRepository.loadWeather()
-    val weatherState = weatherStateForWeather(weather)
-    displayWeatherState(weatherState)
-  }
 
-  private fun weatherStateForWeather(weather: Weather) : WeatherState {
-    if (weather.rain!!.amount!! > 0) {
-      return WeatherState.RAIN
-    }
-    return WeatherState.SUN
-  }
+
+
 }
 
