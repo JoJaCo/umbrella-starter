@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
   }
 
   // 6
-  override fun setPresenter(presenter: MainContract.Presenter) {
+  override fun setPresenter(presenter: MainPresenter) {
     this.presenter = presenter
   }
 

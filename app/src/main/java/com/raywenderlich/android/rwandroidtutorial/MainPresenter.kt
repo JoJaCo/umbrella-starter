@@ -1,7 +1,7 @@
 package com.raywenderlich.android.rwandroidtutorial
 
 
-class MainPresenter(view: MainContract.View,dependencyInjector: DependencyInjector):MainContract {
+class MainPresenter(view: MainContract.View,dependencyInjector: DependencyInjector):MainContract, MainContract.Presenter {
     private val weatherRepository: WeatherRepository
             = dependencyInjector.weatherRepository()
 
@@ -26,15 +26,15 @@ class MainPresenter(view: MainContract.View,dependencyInjector: DependencyInject
     }
 
 
-    override fun onDestroy(){
+   override fun onDestroy(){
         this.view = null
     }
 
-    override fun onViewCreated(){
+   override fun onViewCreated(){
         loadWeather()
     }
 
-    override fun onLoadWeatherTapped(){
+   override fun onLoadWeatherTapped(){
         loadWeather()
     }
 
